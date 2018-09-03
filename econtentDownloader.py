@@ -14,8 +14,9 @@ def drawProgressBar(percent, barLen = 20):
             progress += " "
     sys.stdout.write("[ %s ] %.2f%%" % (progress, percent))
     sys.stdout.flush()
-
-path = "/home/pc/econtent/temp/"
+path = "temp/"
+if not os.path.exists(path):
+    os.makedirs(path)
 img_path = "http://econtent.edu.mn/content/12rangi/eng8/pagetom/p%20"
 page_count = 198
 print("Downloading pages...")
